@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'],
+          ['\\(', '\\)']
+        ]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+  <title>KeyFace: Expressive Audio-Driven Facial Animation for Long Sequences via KeyFrame Interpolation</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="static/css/landing-page.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="static/vendor/bulma-carousel.min.js"></script>
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor//bulma-slider.min.js"></script>
+  <script src="static/vendor/nerfies.js"></script>
+
+</head>
+
+    
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+
+  <div class="container has-text-centered">
+    <h1 class="title is-1 publication-title">
+      KeyFace: Expressive Audio-Driven Facial Animation for Long Sequences via KeyFrame Interpolation
+    </h1>
+    <div class="is-size-6 publication-authors">
+      <span class="author-block">
+        <a href="https://scholar.google.com/citations?user=LuIdiV8AAAAJ">Antoni Bigata</a><sup>1</sup>,</span>
+      <span class="author-block">
+        <a href="https://scholar.google.com/citations?user=ty2OYvcAAAAJ">Michał Stypułkowski</a><sup>2</sup>,</span>
+      <span class="author-block">
+        <a href="https://scholar.google.com/citations?user=08YfKjcAAAAJ">Rodrigo Mira</a><sup>1</sup>,</span>
+      <span class="author-block">
+        <a href="https://scholar.google.com/citations?user=zdg4dj0AAAAJ">Stella Bounareli</a>,</span>
+      <span class="author-block">
+        <a href="https://scholar.google.com/citations?user=WwLpK44AAAAJ">Konstantinos Vougioukas</a><sup>1</sup>,</span>
+      <span class="author-block">
+        <a href="https://scholar.google.com/citations?user=46APmkYAAAAJ">Zoe Landgraf</a><sup>1</sup>,</span>
+      <span class="author-block">
+        <a href="https://scholar.google.com/citations?user=itNst7wAAAAJ">Nikita Drobyshev</a><sup>1</sup>,</span>
+      <span class="author-block">
+        <a href="https://scholar.google.com/citations?user=XmOBJZYAAAAJ">Maciej Zieba</a><sup>3</sup>,</span>
+      <span class="author-block">
+        <a href="https://scholar.google.com/citations?user=6v-UKEMAAAAJ">Stavros Petridis</a><sup>1</sup>,</span>
+      <span class="author-block">
+        <a href="https://scholar.google.com/citations?user=ygpxbK8AAAAJ">Maja Pantic</a><sup>1</sup>
+      </span>
+    </div>
+
+    </div>
+  
+    <div class="is-size-5 publication-authors has-text-centered">
+      <span class="author-block"><sup>1</sup>Imperial College London,</span>
+      <span class="author-block"><sup>2</sup>University of Wrocław,</span>
+      <span class="author-block"><sup>3</sup>Technical University of Wroclaw</span>
+    </div>
+
+    <div class="is-size-4 publication-authors has-text-centered">
+      CVPR 2025
+    </div>
+
+ 
+    <div class="container">
+        <!-- First Row - Front Row 1 -->
+        <div class="columns is-centered">
+            <div class="column is-3">
+                <div class="item is-centered">
+                    <video poster="" id="video1" autoplay controls muted loop height="50%">
+                        <source src="static/videos/front_row_1/example_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="column is-3">
+                <div class="item is-centered">
+                    <video poster="" id="video2" autoplay controls muted loop height="50%">
+                        <source src="static/videos/front_row_1/example_3.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="column is-3">
+                <div class="item is-centered">
+                    <video poster="" id="video3" autoplay controls muted loop height="50%">
+                        <source src="static/videos/front_row_1/example_4.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="column is-3">
+                <div class="item is-centered">
+                    <video poster="" id="video4" autoplay controls muted loop height="50%">
+                        <source src="static/videos/front_row_1/example_5.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Second Row - Front Row 2 -->
+        <div class="columns is-centered">
+            <div class="column is-3">
+                <div class="item is-centered">
+                    <video poster="" id="video5" autoplay controls muted loop height="50%">
+                        <source src="static/videos/front_row_2/example_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="column is-3">
+                <div class="item is-centered">
+                    <video poster="" id="video6" autoplay controls muted loop height="50%">
+                        <source src="static/videos/front_row_2/example_2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="column is-3">
+                <div class="item is-centered">
+                    <video poster="" id="video7" autoplay controls muted loop height="50%">
+                        <source src="static/videos/front_row_2/example_4.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="column is-3">
+                <div class="item is-centered">
+                    <video poster="" id="video8" autoplay controls muted loop height="50%">
+                        <source src="static/videos/front_row_2/example_5.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!--odiv <div class="is-size-4 publication-authors">
+        </>
+         -->
+
+
+  <!-- Icons Grid -->
+<section class="features-icons bg-light text-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <ul class="nav nav-pills nav-justified">
+                    <style>
+                        /* Ensuring all images in the nav-pills have the same size and are centered */
+                        .nav-pills img {
+                            height: 60px; /* Set a fixed height */
+                            width: 60px; /* Set a fixed width to maintain consistency */
+                            object-fit: contain; /* Ensures the image is scaled properly within dimensions */
+                        }
+                        /* Centering content within each list item */
+                        .nav-pills li {
+                            display: flex; /* Using flexbox for aligning items */
+                            flex-direction: column; /* Stack items vertically */
+                            align-items: center; /* Center-align the items */
+                            text-align: center; /* Ensure text is centered */
+                        }
+                        .nav-pills a {
+                            text-decoration: none; /* Removes underline from links */
+                            color: inherit; /* Inherits the text color from the parent */
+                            display: block; /* Ensures the link uses the full area for flex */
+                        }
+                        .nav-pills h4 {
+                            margin-top: 10px; /* Adds a little space between the image and text */
+                        }
+                    </style>
+                    <li class="nav-item">
+                        <a href="https://arxiv.org/abs/2503.01715" class="nav-link">
+                            <img src="static/images/more_img/arxiv.png" alt="ArXiv">
+                            <h4><strong>ArXiv</strong></h4>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="static/KeyFace.pdf" download="KeyFace.pdf" class="nav-link">
+                            <img src="static/images/more_img/paper_image.png" alt="Paper PDF">
+                            <h4><strong>Paper PDF</strong></h4>
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="https://github.com/neeek2303/FEED" class="nav-link">
+                            <img src="static/images/more_img/database_icon.png" alt="Dataset">
+                            <h4><strong>Dataset (to be released by 06/2024)</strong></h4>
+                        </a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a href="https://github.com/antonibigata/KeyFace" class="nav-link">
+                            <img src="static/images/more_img/github.png" alt="Code">
+                            <h4><strong>Code</strong></h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+      
+
+              
+
+      
+
+
+  <section class="section">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="is-centered">
+
+          <div class="content  is-centered has-text-centered">
+            <h2 class="title is-3">Abstract</h2>
+          </div>
+
+
+          <div class="content has-text-justified">
+
+            <p class="lead mb-0" align="justify">
+              
+              Current audio-driven facial animation methods achieve impressive results for short videos but suffer from error accumulation and identity drift when extended to longer durations. Existing methods attempt to mitigate this through external spatial control, increasing long-term consistency but compromising the naturalness of motion. We propose \textbf{KeyFace}, a novel two-stage diffusion-based framework, to address these issues.
+              
+            </p>
+            <p class="lead mb-0" align="justify">
+            </p>
+            <p class="lead mb-0" align="justify">
+            </p>
+        </div>
+
+        
+            <div>
+              <center>
+                <div class="row">
+                  <div class="offset-lg-0 col-lg-12 text-white">
+                    <img class="img-fluid mb-3" src="static/images/more_img/drawing_obama.png" alt="" >
+                  </div>
+                </div>
+            </div>
+
+                
+          
+                
+          <div class="content has-text-justified">
+
+            <p class="lead mb-0" align="justify">
+              
+
+
+              In the first stage, keyframes are generated at a low frame rate, conditioned on audio input and an identity frame, to capture essential facial expressions and movements over extended periods of time. In the second stage, an interpolation model fills in the gaps between keyframes, ensuring smooth transitions and temporal coherence. To further enhance realism, we incorporate continuous emotion representations and handle a wide range of non-speech vocalizations (NSVs), such as laughter and sighs. We also introduce two new evaluation metrics for assessing lip synchronization and NSV generation. Experimental results show that KeyFace outperforms state-of-the-art methods in generating natural, coherent facial animations over extended durations, successfully encompassing NSVs and continuous emotions.                
+            </p>
+            <p class="lead mb-0" align="justify">
+            </p>
+            <p class="lead mb-0" align="justify">
+            </p>
+        </div>
+                
+
+
+
+
+
+      <div class="content has-text-justified is-four-fifths">        
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+         <div class="content has-text-centered">
+          <h2 class="title is-4">Side by side comparison</h2>
+        </div>
+
+    <div class="container">
+        <!-- Side by side comparison video -->
+        <div class="columns is-centered">
+            <div class="column is-10">
+                <div class="item is-centered">
+                    <video poster="" id="video1" autoplay controls muted loop height="40%">
+                        <source src="static/videos/side-by-side_comparison.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content has-text-centered" style="margin-top: 3rem;">
+        <h2 class="title is-4">Non-Speech Vocalizations (NSVs) comparison</h2>
+    </div>
+
+    <div class="container">
+        <!-- NSV comparison video -->
+        <div class="columns is-centered">
+            <div class="column is-10">
+                <div class="item is-centered">
+                    <video poster="" id="video2" autoplay controls muted loop height="40%">
+                        <source src="static/videos/nsv_comparison.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content has-text-centered" style="margin-top: 3rem;">
+        <h2 class="title is-4">Emotion Interpolation</h2>
+    </div>
+
+    <div class="container">
+        <!-- Emotion interpolation video -->
+        <div class="columns is-centered">
+            <div class="column is-10">
+                <div class="item is-centered">
+                    <video poster="" id="video3" autoplay controls muted loop height="40%">
+                        <source src="static/videos/emo_interp.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+  
+
+  
+
+    <section class="section" id="BibTeX">
+    <div class="container content">
+      <h2 class="title">BibTeX</h2>
+      <pre style="text-align: left;"><code>
+        @misc{bigata2025keyfaceexpressiveaudiodrivenfacial,
+          title={KeyFace: Expressive Audio-Driven Facial Animation for Long Sequences via KeyFrame Interpolation}, 
+          author={Antoni Bigata and Michał Stypułkowski and Rodrigo Mira and Stella Bounareli and Konstantinos Vougioukas and Zoe Landgraf and Nikita Drobyshev and Maciej Zieba and Stavros Petridis and Maja Pantic},
+          year={2025},
+          eprint={2503.01715},
+          archivePrefix={arXiv},
+          primaryClass={cs.CV},
+          url={https://arxiv.org/abs/2503.01715}, 
+    }
+      </code></pre>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <p class="footer-text mb-4 mb-lg-0">KeyFace</p>
+          <div class="columns">
+            <div class="content footer-text col-lg-8 h-60">
+                This website is based on <a href="https://nerfies.github.io">nerfies</a>.
+            </div>
+          </div>
+          
+        </div>
+   
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="https://arxiv.org/abs/2503.01715" class="footer-icon">
+                  <i class="ai ai-arxiv"></i>
+              </a>
+            </li>
+            <!-- <li class="list-inline-item mr-3">
+              <a href="./paper/" class="footer-icon">
+                <i class="fa fa-file-image-o"></i>
+              </a>
+            </li> -->
+            
+            <li class="list-inline-item">
+              <a href="https://github.com/antonibigata" class="footer-icon">
+                <i class="fa fa-git"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=KeyFace%3A+Expressive+Audio-Driven+Facial+Animation+for+Long+Sequences+via+KeyFrame+Interpolation&btnG=" class="footer-icon">
+                <i class="icon-graduation"></i>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+  </footer>
+
+
+</body>
+
+</html>
