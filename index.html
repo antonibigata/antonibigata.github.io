@@ -1,283 +1,201 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+    <meta charset="UTF-8">
     <title>Antoni Bigata Casademunt</title>
     <meta name="author" content="Antoni Bigata Casademunt">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/favicon/dragonball.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
-    <!-- Add CSS directly in the head for this example -->
-    <style>
-      /* Default styles for desktop (table layout remains) */
-      .research-entry {
-        display: table-row;
-      }
-      .research-media {
-        display: table-cell;
-        padding: 20px;
-        width: 25%;
-        vertical-align: middle;
-      }
-      .research-text {
-        display: table-cell;
-        padding: 20px;
-        width: 75%;
-        vertical-align: middle;
-      }
+    <link rel="stylesheet" href="styley.css">
+</head>
+<body>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+    <div class="container">
+        <header class="header">
+            <div class="profile-photo">
+                <a href="images/me.jpg"><img src="images/me.jpg" alt="Antoni Bigata Casademunt"></a>
+            </div>
+            <div class="header-content">
+                <h1 class="name">Antoni Bigata Casademunt</h1>
+                <p>PhD student at Imperial College London. Working on human avatars and generative AI. Intern @ Meta and @ Disney Research.</p>
+                <nav class="links">
+                    <a href="mailto:ab4522@ic.ac.uk">Email</a>
+                    <a href="data/CV.pdf">CV</a>
+                    <a href="https://scholar.google.com/citations?user=LuIdiV8AAAAJ&hl=en&oi=ao">Scholar</a>
+                    <a href="https://x.com/toninio444/">Twitter</a>
+                    <a href="https://github.com/antonibigata">Github</a>
+                    <a href="https://www.linkedin.com/in/antoni-bigata/">LinkedIn</a>
+                </nav>
+            </div>
+        </header>
 
-      /* Mobile adjustments */
-      @media screen and (max-width: 768px) {
-        .research-entry {
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-        }
-        .research-media, .research-text {
-          display: block;
-          width: 100%;
-          padding: 10px; /* Reduce padding for mobile */
-        }
-        .research-media {
-          order: 1; /* Media goes first on mobile */
-        }
-        .research-text {
-          order: 2; /* Text follows media on mobile */
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Antoni Bigata Casademunt
-                </p>
-                <p>PhD student at Imperial College London. Working on human avatars and generative AI. Intern @ Meta and @ Disney Research</a>.
-                </p>
-                <p style="text-align:center">
-                  <a href="mailto:ab4522@ic.ac.uk">Email</a>  / 
-                  <a href="data/CV.pdf">CV</a>  / 
-                  <a href="https://scholar.google.com/citations?user=LuIdiV8AAAAJ&hl=en&oi=ao">Scholar</a>  / 
-                  <a href="https://x.com/toninio444/">Twitter</a>  / 
-                  <a href="https://github.com/antonibigata">Github</a>  / 
-                  <a href="https://www.linkedin.com/in/antoni-bigata/">LinkedIn</a>
-                </p>
-              </td>
-              <td style="padding:2.5%;width:40%;max-width:40%">
-                <a href="images/me.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/me.jpg" class="hoverZoomLink"></a>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
+        <section class="research-section">
+            <h2>Research</h2>
+            
             <!-- Research Entry 1: KeyFace -->
-            <tr class="research-entry" onmouseout="keyface_stop()" onmouseover="keyface_start()">
-              <td class="research-media">
-                <div class="one">
-                  <div class="two" id='keyface_image'><video width="100%" muted autoplay loop>
-                    <source src="images/front_row_1_grid.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video></div>
-                  <img src='images/keyface_icon.png' width="100%">
+            <article class="research-entry">
+                <div class="research-media">
+                    <div class="one">
+                        <div class="two">
+                            <video width="100%" muted autoplay loop>
+                                <source src="images/front_row_1_grid.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <img src="images/keyface_icon.png" alt="KeyFace">
+                    </div>
                 </div>
-                <script type="text/javascript">
-                  function keyface_start() {
-                    document.getElementById('keyface_image').style.opacity = "1";
-                  }
-                  function keyface_stop() {
-                    document.getElementById('keyface_image').style.opacity = "0";
-                  }
-                  keyface_stop()
-                </script>
-              </td>
-              <td class="research-text">
-                <a href="https://antonibigata.github.io/KeyFace/">
-                  <span class="papertitle">KeyFace: Expressive Audio-Driven Facial Animation for Long Sequences via KeyFrame Interpolation</span>
-                </a>
-                <br>
-                <strong>Antoni Bigata</strong>,
-                <a href="https://scholar.google.com/citations?user=ty2OYvcAAAAJ">Michał Stypułkowski</a>,
-                <a href="https://scholar.google.com/citations?user=08YfKjcAAAAJ">Rodrigo Mira</a>,
-                <a href="https://scholar.google.com/citations?user=zdg4dj0AAAAJ">Stella Bounareli</a>,
-                <a href="https://scholar.google.com/citations?user=WwLpK44AAAAJ">Konstantinos Vougioukas</a>,
-                <a href="https://scholar.google.com/citations?user=46APmkYAAAAJ">Zoe Landgraf</a>,
-                <a href="https://scholar.google.com/citations?user=itNst7wAAAAJ">Nikita Drobyshev</a>,
-                <a href="https://scholar.google.com/citations?user=XmOBJZYAAAAJ">Maciej Zieba</a>,
-                <a href="https://scholar.google.com/citations?user=6v-UKEMAAAAJ">Stavros Petridis</a>,
-                <a href="https://scholar.google.com/citations?user=ygpxbK8AAAAJ">Maja Pantic</a>
-                <br>
-                <em>CVPR</em>, 2025
-                <br>
-                <a href="https://antonibigata.github.io/KeyFace/">project page</a>
-                /
-                <a href="https://arxiv.org/abs/2503.01715">arXiv</a>
-                <p></p>
-                <p>Current facial animation methods struggle with consistency over long durations, leading to unnatural motion and identity drift. We introduce KeyFace, a novel two-stage diffusion-based framework that generates keyframes at low frame rates and interpolates smooth transitions, ensuring natural and coherent animation. Our model captures continuous emotions and non-speech vocalizations (NSVs) like laughter and sighs, setting a new standard for long-form facial animation.</p>
-              </td>
-            </tr>
+                <div class="research-text">
+                    <a href="https://antonibigata.github.io/KeyFace/"><span class="papertitle">KeyFace: Expressive Audio-Driven Facial Animation for Long Sequences via KeyFrame Interpolation</span></a>
+                    <br>
+                    <strong>Antoni Bigata</strong>,
+                    <a href="https://scholar.google.com/citations?user=ty2OYvcAAAAJ">Michał Stypułkowski</a>,
+                    <a href="https://scholar.google.com/citations?user=08YfKjcAAAAJ">Rodrigo Mira</a>,
+                    <a href="https://scholar.google.com/citations?user=zdg4dj0AAAAJ">Stella Bounareli</a>,
+                    <a href="https://scholar.google.com/citations?user=WwLpK44AAAAJ">Konstantinos Vougioukas</a>,
+                    <a href="https://scholar.google.com/citations?user=46APmkYAAAAJ">Zoe Landgraf</a>,
+                    <a href="https://scholar.google.com/citations?user=itNst7wAAAAJ">Nikita Drobyshev</a>,
+                    <a href="https://scholar.google.com/citations?user=XmOBJZYAAAAJ">Maciej Zieba</a>,
+                    <a href="https://scholar.google.com/citations?user=6v-UKEMAAAAJ">Stavros Petridis</a>,
+                    <a href="https://scholar.google.com/citations?user=ygpxbK8AAAAJ">Maja Pantic</a>
+                    <br>
+                    <em>CVPR</em>, 2025
+                    <br>
+                    <div class="paper-links">
+                        <a href="https://antonibigata.github.io/KeyFace/">Project Page</a>
+                        <a href="https://arxiv.org/abs/2503.01715">arXiv</a>
+                    </div>
+                    <p>Current facial animation methods struggle with consistency over long durations, leading to unnatural motion and identity drift. We introduce KeyFace, a novel two-stage diffusion-based framework that generates keyframes at low frame rates and interpolates smooth transitions, ensuring natural and coherent animation. Our model captures continuous emotions and non-speech vocalizations (NSVs) like laughter and sighs, setting a new standard for long-form facial animation.</p>
+                </div>
+            </article>
 
             <!-- Research Entry 2: CroissantLLM -->
-            <tr class="research-entry" onmouseout="croissant_stop()" onmouseover="croissant_start()">
-              <td class="research-media">
-                <div class="one">
-                  <img src='images/croissant_illustr.png' width="160">
+            <article class="research-entry">
+                <div class="research-media">
+                    <div class="one">
+                        <img src="images/croissant_illustr.png" alt="CroissantLLM">
+                    </div>
                 </div>
-                <script type="text/javascript">
-                  function croissant_start() {
-                    document.getElementById('croissant_image') && (document.getElementById('croissant_image').style.opacity = "1");
-                  }
-                  function croissant_stop() {
-                    document.getElementById('croissant_image') && (document.getElementById('croissant_image').style.opacity = "0");
-                  }
-                  croissant_stop()
-                </script>
-              </td>
-              <td class="research-text">
-                <a href="https://huggingface.co/blog/manu/croissant-llm-blog">
-                  <span class="papertitle">🥐 CroissantLLM: A Truly Bilingual French-English Language Model</span>
-                </a>
-                <br>
-                <a href="">Manuel Faysse</a>,
-                <a href="">Patrick Fernandes</a>,
-                <a href="">Nuno M. Guerreiro</a>,
-                <a href="">António Loison</a>,
-                <a href="">Duarte M. Alves</a>,
-                <a href="">Caio Corro</a>,
-                <a href="">Nicolas Boizard</a>,
-                <a href="">João Alves</a>,
-                <a href="">Ricardo Rei</a>,
-                <a href="">Pedro H. Martins</a>,
-                <strong>Antoni Bigata Casademunt</strong>,
-                <a href="">François Yvon</a>,
-                <a href="">André F.T. Martins</a>,
-                <a href="">Gautier Viaud</a>,
-                <a href="">Céline Hudelot</a>
-                <br>
-                <em>TMLR</em>, 2025
-                <br>
-                <a href="https://huggingface.co/blog/manu/croissant-llm-blog">project page</a>
-                /
-                <a href="https://arxiv.org/abs/2402.00786">arXiv</a>
-                <p></p>
-                <p>CroissantLLM is a 1.3B bilingual model trained on 3T English and French tokens, designed for high performance on consumer hardware. With a 1:1 English-French training approach, a custom tokenizer, and FrenchBench for evaluation, it sets a new standard for multilingual NLP. Fully open-sourced, it includes datasets, checkpoints, and fine-tuned models.</p>
-              </td>
-            </tr>
+                <div class="research-text">
+                    <a href="https://huggingface.co/blog/manu/croissant-llm-blog"><span class="papertitle">🥐 CroissantLLM: A Truly Bilingual French-English Language Model</span></a>
+                    <br>
+                    <a href="">Manuel Faysse</a>,
+                    <a href="">Patrick Fernandes</a>,
+                    <a href="">Nuno M. Guerreiro</a>,
+                    <a href="">António Loison</a>,
+                    <a href="">Duarte M. Alves</a>,
+                    <a href="">Caio Corro</a>,
+                    <a href="">Nicolas Boizard</a>,
+                    <a href="">João Alves</a>,
+                    <a href="">Ricardo Rei</a>,
+                    <a href="">Pedro H. Martins</a>,
+                    <strong>Antoni Bigata Casademunt</strong>,
+                    <a href="">François Yvon</a>,
+                    <a href="">André F.T. Martins</a>,
+                    <a href="">Gautier Viaud</a>,
+                    <a href="">Céline Hud Hudelot</a>
+                    <br>
+                    <em>TMLR</em>, 2025
+                    <br>
+                    <div class="paper-links">
+                        <a href="https://huggingface.co/blog/manu/croissant-llm-blog">Project Page</a>
+                        <a href="https://arxiv.org/abs/2402.00786">arXiv</a>
+                    </div>
+                    <p>CroissantLLM is a 1.3B bilingual model trained on 3T English and French tokens, designed for high performance on consumer hardware. With a 1:1 English-French training approach, a custom tokenizer, and FrenchBench for evaluation, it sets a new standard for multilingual NLP. Fully open-sourced, it includes datasets, checkpoints, and fine-tuned models.</p>
+                </div>
+            </article>
 
             <!-- Research Entry 3: EMOPortraits -->
-            <tr class="research-entry" onmouseout="EP_stop()" onmouseover="EP_start()">
-              <td class="research-media">
-                <div class="one">
-                  <div class="two" id='EP_image'><video width="100%" height="100%" muted autoplay loop>
-                    <source src="images/EP_v.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video></div>
-                  <img src='images/EP_im.png' width="160">
+            <article class="research-entry">
+                <div class="research-media">
+                    <div class="one">
+                        <div class="two">
+                            <video width="100%" height="100%" muted autoplay loop>
+                                <source src="images/EP_v.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <img src="images/EP_im.png" alt="EMOPortraits">
+                    </div>
                 </div>
-                <script type="text/javascript">
-                  function EP_start() {
-                    document.getElementById('EP_image').style.opacity = "1";
-                  }
-                  function EP_stop() {
-                    document.getElementById('EP_image').style.opacity = "0";
-                  }
-                  EP_stop()
-                </script>
-              </td>
-              <td class="research-text">
-                <a href="https://neeek2303.github.io/EMOPortraits">
-                  <span class="papertitle">EMOPortraits: Emotion-enhanced Multimodal One-shot Head Avatars</span>
-                </a>
-                <br> 
-                <a href="">Nikita Drobyshev</a>,
-                <strong>Antoni Bigata Casademunt</strong>,
-                <a href="">Konstantinos Vougioukas</a>,
-                <a href="">Zoe Landgraf</a>,
-                <a href="">Stavros Petridis</a>,
-                <a href="">Maja Pantic</a>
-                <br>
-                <em>CVPR</em>, 2024
-                <br>
-                <a href="https://neeek2303.github.io/EMOPortraits">project page</a>
-                /
-                <a href="https://arxiv.org/abs/2404.19110">arXiv</a>
-                <p></p>
-                <p> EMOPortraits is a head reenactment model that enhances realism in expressing intense, asymmetric emotions and sets new standards in emotion transfer. Additionally, we integrated a speech-driven mode for improved audio-visual animation and introduced a novel multi-view video dataset that captures a broader range of expressions, addressing a critical gap in existing data.</p>
-              </td>
-            </tr>
+                <div class="research-text">
+                    <a href="https://neeek2303.github.io/EMOPortraits"><span class="papertitle">EMOPortraits: Emotion-enhanced Multimodal One-shot Head Avatars</span></a>
+                    <br> 
+                    <a href="">Nikita Drobyshev</a>,
+                    <strong>Antoni Bigata Casademunt</strong>,
+                    <a href="">Konstantinos Vougioukas</a>,
+                    <a href="">Zoe Landgraf</a>,
+                    <a href="">Stavros Petridis</a>,
+                    <a href="">Maja Pantic</a>
+                    <br>
+                    <em>CVPR</em>, 2024
+                    <br>
+                    <div class="paper-links">
+                        <a href="https://neeek2303.github.io/EMOPortraits">Project Page</a>
+                        <a href="https://arxiv.org/abs/2404.19110">arXiv</a>
+                    </div>
+                    <p>EMOPortraits is a head reenactment model that enhances realism in expressing intense, asymmetric emotions and sets new standards in emotion transfer. Additionally, we integrated a speech-driven mode for improved audio-visual animation and introduced a novel multi-view video dataset that captures a broader range of expressions, addressing a critical gap in existing data.</p>
+                </div>
+            </article>
 
             <!-- Research Entry 4: Laughing Matters -->
-            <tr class="research-entry" onmouseout="LM_stop()" onmouseover="LM_start()">
-              <td class="research-media">
-                <div class="one">
-                  <div class="two" id='LM_image'><video width="100%" muted autoplay loop>
-                    <source src="images/LM.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video></div>
-                  <img src='images/LM.png' width="100%">
+            <article class="research-entry">
+                <div class="research-media">
+                    <div class="one">
+                        <div class="two">
+                            <video width="100%" muted autoplay loop>
+                                <source src="images/LM.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <img src="images/LM.png" alt="Laughing Matters">
+                    </div>
                 </div>
-                <script type="text/javascript">
-                  function LM_start() {
-                    document.getElementById('LM_image').style.opacity = "1";
-                  }
-                  function LM_stop() {
-                    document.getElementById('LM_image').style.opacity = "0";
-                  }
-                  LM_stop()
-                </script>
-              </td>
-              <td class="research-text">
-                <a href="https://sites.google.com/view/laughing-matters/">
-                  <span class="papertitle">Laughing Matters: Introducing Laughing-Face Generation using Diffusion Models</span>
-                </a>
-                <br>
-                <strong>Antoni Bigata Casademunt</strong>,
-                <a href="">Rodrigo Mira</a>,
-                <a href="">Nikita Drobyshev</a>,
-                <a href="">Konstantinos Vougioukas</a>,
-                <a href="">Stavros Petridis</a>,
-                <a href="">Maja Pantic</a>,
-                <br>
-                <em>BMVC</em>, 2023
-                <br>
-                <a href="https://sites.google.com/view/laughing-matters/">project page</a>
-                /
-                <a href="https://www.youtube.com/watch?v=TuyIp3b4_Jo">video</a>
-                /
-                <a href="https://arxiv.org/abs/2305.08854">arXiv</a>
-                <p></p>
-                <p>
-                  While speech-driven animation has made impressive strides, non-verbal communication—especially laughter, remains an open challenge. Our work introduces a novel model that generates realistic laughter sequences from a still portrait and an audio clip. By leveraging diffusion models and training on diverse laughter datasets, we outperform traditional facial animation methods, setting a new benchmark for laughter synthesis. 
-                </p>
-              </td>
-            </tr>
+                <div class="research-text">
+                    <a href="https://sites.google.com/view/laughing-matters/"><span class="papertitle">Laughing Matters: Introducing Laughing-Face Generation using Diffusion Models</span></a>
+                    <br>
+                    <strong>Antoni Bigata Casademunt</strong>,
+                    <a href="">Rodrigo Mira</a>,
+                    <a href="">Nikita Drobyshev</a>,
+                    <a href="">Konstantinos Vougioukas</a>,
+                    <a href="">Stavros Petridis</a>,
+                    <a href="">Maja Pantic</a>
+                    <br>
+                    <em>BMVC</em>, 2023
+                    <br>
+                    <div class="paper-links">
+                        <a href="https://sites.google.com/view/laughing-matters/">Project Page</a>
+                        <a href="https://www.youtube.com/watch?v=TuyIp3b4_Jo">Video</a>
+                        <a href="https://arxiv.org/abs/2305.08854">arXiv</a>
+                    </div>
+                    <p>While speech-driven animation has made impressive strides, non-verbal communication—especially laughter, remains an open challenge. Our work introduces a novel model that generates realistic laughter sequences from a still portrait and an audio clip. By leveraging diffusion models and training on diverse laughter datasets, we outperform traditional facial animation methods, setting a new benchmark for laughter synthesis.</p>
+                </div>
+            </article>
+        </section>
 
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0px">
-                <br>
-                <p style="text-align:right;font-size:small;">
-                  Feel free to steal this website's <a href="https://github.com/jonbarron/jonbarron_website">source code</a>. <strong>Do not</strong> scrape the HTML from this page itself, as it includes analytics tags that you do not want on your own website — use the github code instead. Also, consider using <a href="https://leonidk.com/">Leonid Keselman</a>'s <a href="https://github.com/leonidk/new_website">Jekyll fork</a> of this page.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-        </td>
-      </tr>
-    </table>
-  </body>
+        <footer class="footer">
+            <p>Based on this website's <a href="https://github.com/jonbarron/jonbarron_website">source code</a>. 
+        </footer>
+    </div>
+
+    <script>
+        // Check for saved theme preference or use system preference
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+        const savedTheme = localStorage.getItem("theme");
+        
+        if (savedTheme === "dark" || (!savedTheme && prefersDarkScheme.matches)) {
+            document.documentElement.setAttribute("data-theme", "dark");
+        }
+        
+        // Theme toggle functionality
+        const themeToggle = document.getElementById("theme-toggle");
+        themeToggle.addEventListener("click", () => {
+            const currentTheme = document.documentElement.getAttribute("data-theme");
+            const newTheme = currentTheme === "dark" ? "light" : "dark";
+            
+            document.documentElement.setAttribute("data-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
+        });
+    </script>
+</body>
 </html>
